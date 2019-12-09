@@ -1,0 +1,142 @@
+﻿Build1=memebrgiri,com.it.fome
+File1=background_hd.jpg
+File10=insta.html
+File11=instadb.db
+File12=iran_sans.ttf
+File13=lazyloader.gif
+File14=spaleshmember.png
+File15=start.png
+File16=view_icon.png
+File2=bgmenos.jpg
+File3=c_com.png
+File4=c_follow.png
+File5=c_like.png
+File6=channel_icon.png
+File7=coins.png
+File8=group_icon.png
+File9=iconmember.png
+FileGroup1=Default Group
+FileGroup10=Default Group
+FileGroup11=Default Group
+FileGroup12=Default Group
+FileGroup13=Default Group
+FileGroup14=Default Group
+FileGroup15=Default Group
+FileGroup16=Default Group
+FileGroup2=Default Group
+FileGroup3=Default Group
+FileGroup4=Default Group
+FileGroup5=Default Group
+FileGroup6=Default Group
+FileGroup7=Default Group
+FileGroup8=Default Group
+FileGroup9=Default Group
+Group=Default Group
+IconFile=
+Library1=core
+Library10=webviewextras2
+Library11=stringutils
+Library12=msmaterialdrawer
+Library13=materialdialogs
+Library14=reflection
+Library15=cardview
+Library16=materialtoast
+Library17=nivad-billing-wrapper
+Library18=tele_v7
+Library19=hitex_glidetransformation
+Library2=sql
+Library20=byteconverter
+Library21=hitex_reveallayout
+Library22=animation
+Library23=ime
+Library24=javaobject
+Library25=encryption
+Library26=dateutils
+Library27=spinkitview
+Library28=firebasenotifications
+Library29=okhttp
+Library3=json
+Library4=mc7roundview
+Library5=hitex_glide
+Library6=hitex_recyclerview
+Library7=persianfastnetwork
+Library8=appcompat
+Library9=xmllayoutbuilder
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: https://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="26"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~CreateResourceFromFile(Macro, Themes.DarkTheme)~\n~'End of default text.~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~~\n~CreateResource(values, theme.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">~\n~        <item name="colorPrimary">#0098FF</item>~\n~        <item name="colorPrimaryDark">#0600FF</item>~\n~        <item name="colorAccent">#AAAA00</item>~\n~        <item name="windowNoTitle">true</item>~\n~    </style>~\n~</resources>~\n~)~\n~~\n~AddApplicationText(~\n~<activity android:name="io.nivad.billing.b4a.PurchaseActivity" />)~\n~AddPermission(com.farsitel.bazaar.permission.PAY_THROUGH_BAZAAR)~\n~~\n~''''''''''''''''''''''''''''''''''''''''''''''pn alarm~\n~CreateResourceFromFile(Macro, FirebaseAnalytics.GooglePlayBase)~\n~CreateResourceFromFile(Macro, FirebaseAnalytics.Firebase)~\n~CreateResourceFromFile(Macro, FirebaseNotifications.FirebaseNotifications)      
+Module1=mi_meno
+Module10=ac_hsef
+Module11=MI_topusers
+Module12=ac_tsearch
+Module13=mt_sef
+Module14=ac_tcoin
+Module15=ac_home
+Module16=Act_Chat
+Module17=Starter
+Module18=NB6
+Module2=ac_telelogin
+Module3=ac_shop
+Module4=MI_shop
+Module5=ac_tansfer
+Module6=FirebaseMessaging
+Module7=ac_tselect
+Module8=ac_lchats
+Module9=ac_tfreecoin
+NumberOfFiles=16
+NumberOfLibraries=29
+NumberOfModules=18
+Version=9.5
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: telegram member bgir
+	#VersionCode: 4
+	#VersionName: 1
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+#AdditionalRes:../res
+#AdditionalRes:../resMaterialToast
+#BridgeLogger:true
+#MultiDex:true
+#Extends: de.amberhome.materialdialogs.MaterialDialogsActivity
+#AdditionalRes: ..\rescom
+#AdditionalRes: D:\android\android-sdk\extras\android\support\v7\md-app\res
+#AdditionalRes: D:\android\android-sdk\extras\android\support\v7\md-lib\res
+Sub Process_Globals
+	
+
+End Sub
+
+Sub Globals
+	Private skv11 As SpinKitView
+	
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.SetBackgroundImage(LoadBitmap(File.DirAssets,"spaleshmember.png"))
+	
+	skv11.Initialize("skv11")
+	Activity.AddView(skv11,35%x,70%y,30%x,30%x)
+	skv11.Visible = True
+	skv11.SpinKitColor = Colors.Cyan
+	skv11.SpinKitType = skv11.CIRCLE
+	skv11.goForIt
+	
+	Sleep(4000)
+	StartActivity(ac_telelogin)
+    Activity.Finish
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
